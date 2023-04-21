@@ -11,7 +11,8 @@ a=0
 j=0
 b=0
 s=0
-urlip = 'https://pastebin.com/Uye4MBB4'
+print(ip1)
+urlip = requests.get('https://pastebin.com/Uye4MBB4').text
 if ip1 in urlip:
     os.system('clear')
 else:
@@ -597,7 +598,7 @@ def login():
         
 
 #########################################################################################333
-print('\033[1;37mGmail \033[1;32mTool \033[1;37mFree \033[1;33m0\033[1;31m.\033[1;33m2 \033[1;31m, \033[1;32m@MVMVP')
+print('\033[1;37mGmail \033[1;32mTool \033[1;37mFree \033[1;33m0\033[1;31m.\033[1;33m2 \033[1;31m, \033[1;32m@BBMZZ')
 print('[1] - Checker\n[2] - Checker api[2]\n[3] - Remove list users\n[0] - Remove List')
 inp = str(input('[-] Enter Your :'))
 os.system('cls' if os.name=='nt'else'clear')
