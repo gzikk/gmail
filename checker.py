@@ -158,17 +158,10 @@ def gmail1():
                     ree = rl.json()
                     da = ree['date']
                     headers1 = {
-    # 'Content-Length': '305',
-                        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-                        'Host': 'i.instagram.com',
-                        'Connection': 'Keep-Alive',
-                        'User-Agent': 'Instagram 6.12.1 Android (25/7.1.2; 160dpi; 383x680; LENOVO/Android-x86; 4242ED1; x86_64; android_x86_64; en_US)',
-                        # Requests sorts cookies= alphabetically
-
-                        'Accept-Language': 'en-US',
-                        'X-IG-Connection-Type': 'WIFI',
-                        'X-IG-Capabilities': 'AQ==',
-                        # 'Accept-Encoding': 'gzip',
+                        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
+                        'viewport-width': '917',
+                        'x-asbd-id': '198387',
+                        'x-csrftoken': 'jYtUPej72VOcpPBby1dtNJUOyYkxLTCH',
                     }
                     data3 = {
                         'ig_sig_key_version': '4',
@@ -208,15 +201,6 @@ def gmail1():
             print('Error Choice....\n')
             os.system('cls' if os.name=='nt'else'clear')
             gmail()
-
-
-
-
-
-
-
-
-
 
 ######################################################
 def gmail():
@@ -393,16 +377,10 @@ def gmail():
                     da = ree['date']
                     headers1 = {
     # 'Content-Length': '305',
-                        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-                        'Host': 'i.instagram.com',
-                        'Connection': 'Keep-Alive',
-                        'User-Agent': 'Instagram 6.12.1 Android (25/7.1.2; 160dpi; 383x680; LENOVO/Android-x86; 4242ED1; x86_64; android_x86_64; en_US)',
-                        # Requests sorts cookies= alphabetically
-
-                        'Accept-Language': 'en-US',
-                        'X-IG-Connection-Type': 'WIFI',
-                        'X-IG-Capabilities': 'AQ==',
-                        # 'Accept-Encoding': 'gzip',
+                        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
+                        'viewport-width': '917',
+                        'x-asbd-id': '198387',
+                        'x-csrftoken': 'jYtUPej72VOcpPBby1dtNJUOyYkxLTCH',
                     }
                     data3 = {
                         'ig_sig_key_version': '4',
@@ -598,7 +576,7 @@ def login():
         
 
 #########################################################################################333
-print('\033[1;37mGmail \033[1;32mTool \033[1;37mFree \033[1;33m0\033[1;31m.\033[1;33m2 \033[1;31m, \033[1;32m@BBMZZ')
+print('\033[1;37mGmail \033[1;32mTool \033[1;37mFree \033[1;33m0\033[1;31m.\033[1;33m3 \033[1;31m, \033[1;32m@BBMZZ')
 print('[1] - Checker\n[2] - Checker api[2]\n[3] - Remove list users\n[0] - Remove List')
 inp = str(input('[-] Enter Your :'))
 os.system('cls' if os.name=='nt'else'clear')
