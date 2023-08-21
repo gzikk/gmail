@@ -461,7 +461,7 @@ def login():
         
 
 #########################################################################################333
-print('\033[1;37mGmail \033[1;32mTool \033[1;37mFree \033[1;33m0\033[1;31m.\033[1;33m5 \033[1;31m, \033[1;32m@BBMZZ')
+print('\033[1;37mGmail \033[1;32mTool \033[1;37mFree \033[1;33m1\033[1;31m.\033[1;33m1 \033[1;31m, \033[1;32m@BBMZZ')
 print('[1] - Checker\n[2] - Checker api[2]\n[3] - Remove list users\n[0] - Remove List')
 inp = str(input('[-] Enter Your :'))
 os.system('cls' if os.name=='nt'else'clear')
