@@ -60,7 +60,7 @@ def gmail1():
                     'Connection':'Keep-Alive',
                     'user-agent':'GoogleLoginService/1.3(m0 JSS15J)',}
                 data= json.dumps({
-                    'username':email,
+                    'username':f'{email}@gmail.com',
                     'version':'3',
                     'firstName':'AbaLahb',
                     'lastName':'AbuJahl'})
@@ -245,7 +245,7 @@ def gmail():
                     'Connection':'Keep-Alive',
                     'user-agent':'GoogleLoginService/1.3(m0 JSS15J)',}
                 data= json.dumps({
-                    'username':email,
+                    'username':f'{email}@gmail.com',
                     'version':'3',
                     'firstName':'AbaLahb',
                     'lastName':'AbuJahl'})
