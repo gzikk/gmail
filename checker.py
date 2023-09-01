@@ -339,10 +339,16 @@ def gmail():
                         print(lm)
                         jx =uss[0]
                         jxx =uss[xj]
-                        kc = res[0]
-                        k1 = res[8]
-                        if (jx)== (kc) and (jxx) ==(k1):
+                        try:
 
+                            kc = res[0]
+                            k1 = res[8]
+                        except (UnboundLocalError,KeyError) as error:
+                            lm = f'✓ 𝙷𝙸𝚃 : {j}\n✓ 𝙵𝙺𝙻𝙻 𝙽𝙰𝙼𝙴 : {nam}\n✓ 𝙺𝚂𝙴𝚁𝙽𝙰𝙼𝙴 : {nn}\n✓ 𝙴𝙼𝙰𝙸𝙻 : {email}@gmail.com\n✓ 𝙵𝙾𝙻𝙻𝙾𝚆𝙸𝙽𝙶 : {fols}\n✓ 𝙵𝙾𝙻𝙻𝚆𝙴𝚁𝚂:: {fol}\n✓ 𝙱𝙸𝙾 : {bio}\n✓ 𝙺𝚂𝙴𝚁 𝙸𝙳 : {id}\n✓ 𝙳𝙰𝚃𝙰 𝙰𝙲𝙲𝙾𝙺𝙸𝙽𝚃 : {da}\n✓ Info : لم تتمكن الاداة من كشف المعلومات\n✓ 𝙱𝚈 : @BBMZZ - #zaid_kareem'
+                            tlg =(f'https://api.telegram.org/bot{took}/sendMessage?chat_id={idddd}&text={lm}')
+                            ru= requests.post(tlg)
+                            continue
+                        if (jx)== (kc) and (jxx) ==(k1):
                             try:
                                 lm = f'✓ 𝙷𝙸𝚃 : {j}\n✓ 𝙵𝙺𝙻𝙻 𝙽𝙰𝙼𝙴 : {nam}\n✓ 𝙺𝚂𝙴𝚁𝙽𝙰𝙼𝙴 : {nn}\n✓ 𝙴𝙼𝙰𝙸𝙻 : {email}@gmail.com\n✓ 𝙵𝙾𝙻𝙻𝙾𝚆𝙸𝙽𝙶 : {fols}\n✓ 𝙵𝙾𝙻𝙻𝚆𝙴𝚁𝚂:: {fol}\n✓ 𝙱𝙸𝙾 : {bio}\n✓ 𝙺𝚂𝙴𝚁 𝙸𝙳 : {id}\n✓ 𝚁𝙴𝚂𝚃 : {rs}\n✓ 𝙳𝙰𝚃𝙰 𝙰𝙲𝙲𝙾𝙺𝙸𝙽𝚃 : {da}\n✓ Info : معلومات الحساب صحيحة\n✓ 𝙱𝚈 : @BBMZZ - #zaid_kareem'
                                 tlg =(f'https://api.telegram.org/bot{took}/sendMessage?chat_id={idddd}&text={lm}')
