@@ -264,6 +264,8 @@ def gmail():
 
 
                     nn = email
+                    with open('trueinstagram.txt','a') as f8:
+                        f8.write(f'{email}\n')
                     url2='https://www.instagram.com/api/v1/users/web_profile_info/?username={}'.format(nn)
                     head2={
                         'accept': '*/*',
@@ -331,14 +333,27 @@ def gmail():
                         continue
                     j+=1
                     try:
-                        try:
-                            lm = f'✓ 𝙷𝙸𝚃 : {j}\n✓ 𝙵𝙺𝙻𝙻 𝙽𝙰𝙼𝙴 : {nam}\n✓ 𝙺𝚂𝙴𝚁𝙽𝙰𝙼𝙴 : {nn}\n✓ 𝙴𝙼𝙰𝙸𝙻 : {email}@gmail.com\n✓ 𝙵𝙾𝙻𝙻𝙾𝚆𝙸𝙽𝙶 : {fols}\n✓ 𝙵𝙾𝙻𝙻𝚆𝙴𝚁𝚂:: {fol}\n✓ 𝙱𝙸𝙾 : {bio}\n✓ 𝙺𝚂𝙴𝚁 𝙸𝙳 : {id}\n✓ 𝚁𝙴𝚂𝚃 : {rs}\n✓ 𝙳𝙰𝚃𝙰 𝙰𝙲𝙲𝙾𝙺𝙸𝙽𝚃 : {da}\n✓ 𝙱𝚈 : @BBMZZ - #zaid_kareem'
+                        uss = (nn)
+                        lm = len(nn)
+                        xj = lm-1
+                        print(lm)
+                        jx =uss[0]
+                        jxx =uss[xj]
+                        kc = res[0]
+                        k1 = res[8]
+                        if (jx)== (kc) and (jxx) ==(k1):
+
+                            try:
+                                lm = f'✓ 𝙷𝙸𝚃 : {j}\n✓ 𝙵𝙺𝙻𝙻 𝙽𝙰𝙼𝙴 : {nam}\n✓ 𝙺𝚂𝙴𝚁𝙽𝙰𝙼𝙴 : {nn}\n✓ 𝙴𝙼𝙰𝙸𝙻 : {email}@gmail.com\n✓ 𝙵𝙾𝙻𝙻𝙾𝚆𝙸𝙽𝙶 : {fols}\n✓ 𝙵𝙾𝙻𝙻𝚆𝙴𝚁𝚂:: {fol}\n✓ 𝙱𝙸𝙾 : {bio}\n✓ 𝙺𝚂𝙴𝚁 𝙸𝙳 : {id}\n✓ 𝚁𝙴𝚂𝚃 : {rs}\n✓ 𝙳𝙰𝚃𝙰 𝙰𝙲𝙲𝙾𝙺𝙸𝙽𝚃 : {da}\n✓ Info : معلومات الحساب صحيحة\n✓ 𝙱𝚈 : @BBMZZ - #zaid_kareem'
+                                tlg =(f'https://api.telegram.org/bot{took}/sendMessage?chat_id={idddd}&text={lm}')
+                                ru= requests.post(tlg)
+                                
+                            except UnboundLocalError as error:
+                                b+=1
+                        else:
+                            lm = f'✓ 𝙷𝙸𝚃 : {j}\n✓ 𝙵𝙺𝙻𝙻 𝙽𝙰𝙼𝙴 : {nam}\n✓ 𝙺𝚂𝙴𝚁𝙽𝙰𝙼𝙴 : {nn}\n✓ 𝙴𝙼𝙰𝙸𝙻 : {email}@gmail.com\n✓ 𝙵𝙾𝙻𝙻𝙾𝚆𝙸𝙽𝙶 : {fols}\n✓ 𝙵𝙾𝙻𝙻𝚆𝙴𝚁𝚂:: {fol}\n✓ 𝙱𝙸𝙾 : {bio}\n✓ 𝙺𝚂𝙴𝚁 𝙸𝙳 : {id}\n✓ 𝚁𝙴𝚂𝚃 : {rs}\n✓ 𝙳𝙰𝚃𝙰 𝙰𝙲𝙲𝙾𝙺𝙸𝙽𝚃 : {da}\n✓ Info : معلومات الحساب خطأ\n✓ 𝙱𝚈 : @BBMZZ - #zaid_kareem'
                             tlg =(f'https://api.telegram.org/bot{took}/sendMessage?chat_id={idddd}&text={lm}')
                             ru= requests.post(tlg)
-                            with open('trueinstagram.txt','a') as f8:
-                                f8.write(f'{email}\n')
-                        except UnboundLocalError as error:
-                            b+=1
                     except requests.exceptions.ConnectionError as error:
                         continue
                 else:
@@ -461,7 +476,7 @@ def login():
         
 
 #########################################################################################333
-print('\033[1;37mGmail \033[1;32mTool \033[1;37mFree \033[1;33m1\033[1;31m.\033[1;33m1 \033[1;31m, \033[1;32m@BBMZZ')
+print('\033[1;37mGmail \033[1;32mTool \033[1;37mFree \033[1;33m1\033[1;31m.\033[1;33m2 \033[1;31m, \033[1;32m@BBMZZ - @zaidkarrem')
 print('[1] - Checker\n[2] - Checker api[2]\n[3] - Remove list users\n[0] - Remove List')
 inp = str(input('[-] Enter Your :'))
 os.system('cls' if os.name=='nt'else'clear')
