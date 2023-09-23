@@ -237,7 +237,7 @@ def gmail():
             elif ('"Sorry, there was a problem with your request.') in rf:
                 time.sleep(5)
             elif ('"user":true,') in rf:
-                url = 'https://android.clients.google.com/setup/checkavail'
+                url = requests.get(f'https://api-gmail-97f03023f7dd.herokuapp.com/api/gmail/v1/v.1/{email}')
                 headers = {
                     'Content-Length':'98',
                     'Content-Type':'text/plain; charset=UTF-8',
@@ -260,7 +260,7 @@ def gmail():
                        
            
 
-                if res.json()['status'] == 'SUCCESS':
+                if url.json()[0]['status'] == 'Ok':
 
 
                     nn = email
@@ -482,7 +482,7 @@ def login():
         
 
 #########################################################################################333
-print('\033[1;37mGmail \033[1;32mTool \033[1;37mFree \033[1;33m1\033[1;31m.\033[1;33m2 \033[1;31m, \033[1;32m@BBMZZ - @zaidkarrem')
+print('\033[1;37mGmail \033[1;32mTool \033[1;37mFree \033[1;33m1\033[1;31m.\033[1;33m3 (Api Gmail New) \033[1;31m, \033[1;32m@BBMZZ - @zaidkarrem')
 print('[1] - Checker\n[2] - Checker api[2]\n[3] - Remove list users\n[0] - Remove List')
 inp = str(input('[-] Enter Your :'))
 os.system('cls' if os.name=='nt'else'clear')
